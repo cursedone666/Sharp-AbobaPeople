@@ -48,5 +48,97 @@ namespace TestProject1.PageObject.Footer
         private By _twitterFooter = By.XPath("//a[contains(@href, 'https://twitter.com/seleniumfrmwrk')]");
         //YouTube Button
         private By _youtubeFooter = By.XPath("//a[contains(@href, 'https://www.youtube.com/channel/UCHl59sI3SRjQ-qPcTrgt0tA')]");
+
+
+        public AboutUs AboutUsTest()
+        {
+            _driver.FindElement(_aboutUs).Click();
+            return new AboutUs(_driver);
+        }
+        public BestSellersFooter bestSellersFooterTest()
+        {
+            _driver.FindElement(_bestSellersFooter);
+            return new BestSellersFooter(_driver);
+        }
+        public ContactUsFooter ContactUsFooterCheck()
+        {
+            _driver.FindElement(_contactUsFooter);
+            return new ContactUsFooter(_driver);
+        }
+        public Facebook FacebookCheck()
+        {
+            _driver.FindElement(_facebookFooter);
+            return new Facebook(_driver);
+        }
+        public GoogleFooter GoogleCheck()
+        {
+            _driver.FindElement(_googleFooter);
+            return new GoogleFooter(_driver);
+        }
+        public MyAccountFooter MyAccCheck()
+        {
+            _driver.FindElement(_myAccountFooter);
+            return new MyAccountFooter(_driver);
+        }
+        public MyAdressesFooter MyAddressCheck()
+        {
+            _driver.FindElement(_myAdresses);
+            return new MyAdressesFooter(_driver);
+        }
+        public MyCreditSlips CreditSlplsCheck()
+        {
+            _driver.FindElement(_myCreditSlips);
+            return new MyCreditSlips(_driver);
+        }
+        public MyOrdersFooter MyOrdersCheck()
+        {
+            _driver.FindElement(_myOrders);
+            return new MyOrdersFooter(_driver);
+        }
+        public MyPersonalInfo PersonalInfoCheck()
+        {
+            _driver.FindElement(_myPersonalInfo);
+            return new MyPersonalInfo(_driver);
+        }
+        public NewProducts NewProductsCheck()
+        {
+            _driver.FindElement(_newProductsFooter);
+            return new NewProducts(_driver);
+        }
+        public OurStores OurStoresCheck()
+        {
+            _driver.FindElement(_ourStoresFooter);
+            return new OurStores(_driver);
+        }
+        public SiteMap SiteMapCheck()
+        {
+            _driver.FindElement(_siteMap);
+            return new SiteMap(_driver);
+        }
+        public Specials SpecialsCheck()
+        {
+            _driver.FindElement(_specialsFooter);
+            return new Specials(_driver);
+        }
+        public TermsAndConditions TermsAndCondCheck()
+        {
+            _driver.FindElement(_termsAndConditions);
+            return new TermsAndConditions(_driver);
+        }
+        public TwitterFooter TwitterCheck()
+        {
+            _driver.FindElement(_twitterFooter);
+            return new TwitterFooter(_driver);
+        }
+        public Women WomenCheck()
+        {
+            _driver.FindElement(_womenFooter);
+            return new Women(_driver);
+        }
+        public YouTubeFooter YTCheck()
+        {
+            _driver.FindElement(_youtubeFooter);
+            return new YouTubeFooter(_driver);
+        }
     }
 }
