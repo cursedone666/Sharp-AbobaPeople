@@ -5,6 +5,7 @@ using OpenQA.Selenium.Interactions;
 
 namespace TestProject1.PageObject
 {
+    //Ilya Tverdohleb
     public class Header
     {
         protected IWebDriver _driver;
@@ -24,19 +25,19 @@ namespace TestProject1.PageObject
         private By _searchClick = By.Id("search_query_top");
         private By _searchLoopClick = By.Name("submit_search");
         //Women part
-        private By _womenClick = By.XPath("//a[contains(text(),'Women')]");
+        private By _womenElement = By.XPath("//a[contains(text(),'Women')]");
         private By _womenTshirt = By.XPath("//a[contains(text(),'T-shirts')]");
         private By _womenBlouses = By.XPath("//a[contains(text(),'Blouses')]");
         private By _womenSummerDress = By.XPath("//a[contains(text(),'Summer Dresses')]");
         private By _womenEveningDress = By.XPath("//a[contains(text(),'Evening Dresses')]");
         private By _womenCasualDresse = By.XPath("//a[contains(text(),'Casual Dresses')]");
         //Dresses part
-        private By _dressesClick = By.XPath("(//a[contains(text(),'Dresses')])[5]");
+        private By _dressesElement = By.XPath("(//a[contains(text(),'Dresses')])[5]");
         private By _casualDresses = By.XPath("(//a[contains(text(),'Casual Dresses')])[2]");
         private By _eveningDresses = By.XPath("(//a[contains(text(),'Evening Dresses')])[2]");
         private By _summerDresses = By.XPath("(//a[contains(text(),'Summer Dresses')])[2]");
         //T-shirts part
-        private By _tShirtClick = By.XPath("(//a[contains(text(),'T-shirts')])[2]");
+        private By _tShirtElement = By.XPath("(//a[contains(text(),'T-shirts')])[2]");
         //Cart part
         private By _cartClick = By.XPath("//header[@id='header']/div[3]/div/div/div[3]/div/a");
 
@@ -97,7 +98,7 @@ namespace TestProject1.PageObject
 
         public WomenPart Women()
         {
-            _driver.FindElement(_womenClick).Click();
+            _driver.FindElement(_womenElement).Click();
 
             return new WomenPart(_driver);
         }
@@ -105,9 +106,9 @@ namespace TestProject1.PageObject
         public WomenPart WomenHover()
         {
             Actions act = new Actions(_driver);
-            IWebElement element = _driver.FindElement(_womenClick);
+            IWebElement element = _driver.FindElement(_womenElement);
             act.MoveToElement(element).Perform();
-            _driver.FindElement(_womenClick).Click();
+            _driver.FindElement(_womenElement).Click();
 
             return new WomenPart(_driver);
         }
@@ -115,7 +116,7 @@ namespace TestProject1.PageObject
         public WomenPart WomenTshirtHover()
         {
             Actions act = new Actions(_driver);
-            IWebElement element = _driver.FindElement(_womenClick);
+            IWebElement element = _driver.FindElement(_womenElement);
             act.MoveToElement(element).Perform();
             _driver.FindElement(_womenTshirt).Click();
 
@@ -125,7 +126,7 @@ namespace TestProject1.PageObject
         public WomenPart WomenBlouseHover()
         {
             Actions act = new Actions(_driver);
-            IWebElement element = _driver.FindElement(_womenClick);
+            IWebElement element = _driver.FindElement(_womenElement);
             act.MoveToElement(element).Perform();
             _driver.FindElement(_womenBlouses).Click();
 
@@ -135,7 +136,7 @@ namespace TestProject1.PageObject
         public WomenPart WomenEveningDressHoverTest()
         {
             Actions act = new Actions(_driver);
-            IWebElement element = _driver.FindElement(_womenClick);
+            IWebElement element = _driver.FindElement(_womenElement);
             act.MoveToElement(element).Perform();
             _driver.FindElement(_womenEveningDress).Click();
 
@@ -145,7 +146,7 @@ namespace TestProject1.PageObject
         public WomenPart WomenCasualDressHoverTest()
         {
             Actions act = new Actions(_driver);
-            IWebElement element = _driver.FindElement(_womenClick);
+            IWebElement element = _driver.FindElement(_womenElement);
             act.MoveToElement(element).Perform();
             _driver.FindElement(_womenCasualDresse).Click();
 
@@ -155,7 +156,7 @@ namespace TestProject1.PageObject
         public WomenPart WomenSummerHoverTest()
         {
             Actions act = new Actions(_driver);
-            IWebElement element = _driver.FindElement(_womenClick);
+            IWebElement element = _driver.FindElement(_womenElement);
             act.MoveToElement(element).Perform();
             _driver.FindElement(_womenSummerDress).Click();
 
@@ -164,16 +165,16 @@ namespace TestProject1.PageObject
 
         public DressesPart Dresses()
         {
-            _driver.FindElement(_dressesClick).Click();
+            _driver.FindElement(_dressesElement).Click();
             return new DressesPart(_driver);
         }
 
         public DressesPart DressesHoverCheck()
         {
             Actions act = new Actions(_driver);
-            IWebElement element = _driver.FindElement(_dressesClick);
+            IWebElement element = _driver.FindElement(_dressesElement);
             act.MoveToElement(element).Perform();
-            _driver.FindElement(_dressesClick).Click();
+            _driver.FindElement(_dressesElement).Click();
             return new DressesPart(_driver);
         }
 
@@ -182,7 +183,7 @@ namespace TestProject1.PageObject
             
 
             Actions act = new Actions(_driver);
-            IWebElement element = _driver.FindElement(_dressesClick);
+            IWebElement element = _driver.FindElement(_dressesElement);
             act.MoveToElement(element).Perform();
             _driver.FindElement(_eveningDresses).Click();
             return new DressesPart(_driver);
@@ -191,7 +192,7 @@ namespace TestProject1.PageObject
         public DressesPart SummerDressesHoverTest()
         {
             Actions act = new Actions(_driver);
-            IWebElement element = _driver.FindElement(_dressesClick);
+            IWebElement element = _driver.FindElement(_dressesElement);
             act.MoveToElement(element).Perform();
             _driver.FindElement(_summerDresses).Click();
             return new DressesPart(_driver);
@@ -200,7 +201,7 @@ namespace TestProject1.PageObject
         public DressesPart CasualDressesHoverTest()
         {
             Actions act = new Actions(_driver);
-            IWebElement element = _driver.FindElement(_dressesClick);
+            IWebElement element = _driver.FindElement(_dressesElement);
             act.MoveToElement(element).Perform();
             _driver.FindElement(_casualDresses).Click();
             return new DressesPart(_driver);
@@ -208,16 +209,16 @@ namespace TestProject1.PageObject
 
         public TShirtPart TShirt()
         {
-            _driver.FindElement(_tShirtClick).Click();
+            _driver.FindElement(_tShirtElement).Click();
             return new TShirtPart(_driver);
         }
 
         public TShirtPart TshirtHover()
         {
             Actions act = new Actions(_driver);
-            IWebElement element = _driver.FindElement(_tShirtClick);
+            IWebElement element = _driver.FindElement(_tShirtElement);
             act.MoveToElement(element).Perform();
-            _driver.FindElement(_tShirtClick).Click();
+            _driver.FindElement(_tShirtElement).Click();
             return new TShirtPart(_driver);
         }
 
