@@ -10,6 +10,7 @@ namespace TestProject1.PageObject.Footer
 {
     public class Footer
     {
+        //Ilya Tverdohleb
         protected IWebDriver _driver;
 
         //Women button in footer
